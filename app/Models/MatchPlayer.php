@@ -20,6 +20,12 @@ class MatchPlayer extends Model {
         'coffee',
         'played'
     ];
+    protected $casts = [
+        'survived' => 'float',
+        'coffee' => 'boolean',
+        'mvp' => 'boolean',
+        'played' => 'boolean',
+    ];
 
     public function match() { return $this->belongsTo(Game::class, 'match_id'); }
     public function player() { return $this->belongsTo(Player::class); }
