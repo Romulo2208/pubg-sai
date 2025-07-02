@@ -5,7 +5,6 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Semana</th>
         <th>Jogador</th>
         <th>Abates</th>
         <th>Assistências</th>
@@ -22,8 +21,7 @@
     <tbody>
       @foreach($stats as $stat)
       <tr>
-        <td>{{ $stat->week_start->format('d/m/Y') }}</td>
-        <td>{{ $stat->player->name }}</td>
+        <td>{{ $stat->player_name }}</td>
         <td>{{ $stat->kills }}</td>
         <td>{{ $stat->assists }}</td>
         <td>{{ $stat->damage }}</td>
@@ -36,6 +34,19 @@
         <td>{{ $stat->matches_played }}</td>
       </tr>
       @endforeach
+      <tr>
+        <td><strong>Total</strong></td>
+        <td>{{ $stats->sum('kills') }}</td>
+        <td>{{ $stats->sum('assists') }}</td>
+        <td>{{ $stats->sum('damage') }}</td>
+        <td>{{ $stats->sum('survived_minutes') }}</td>
+        <td>{{ $stats->sum('rescues') }}</td>
+        <td>{{ $stats->sum('call_back') }}</td>
+        <td>{{ $stats->sum('score') }}</td>
+        <td>{{ $stats->sum('mvp_count') }}</td>
+        <td>{{ $stats->sum('coffee_breaks') }}</td>
+        <td>{{ $stats->sum('matches_played') }}</td>
+      </tr>
     </tbody>
   </table>
 @endsection
