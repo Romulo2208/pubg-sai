@@ -6,7 +6,7 @@ use App\Http\Controllers\MatchController;
 use App\Http\Controllers\ChartController;
 
 Route::get('/', function () {
-    return '<h1>Laravel está rodando!</h1>';
+    return view('home');
 });
 
 Route::resource('weekly-stats', WeeklyStatController::class);

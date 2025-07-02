@@ -2,13 +2,15 @@
 @section('content')
     <h1>Gráficos</h1>
     <div class="mb-4">
-        <canvas id="scoreChart"></canvas>
+        <canvas id="scoreChart" style="max-width:500px;"></canvas>
     </div>
-    <div class="mb-4">
-        <canvas id="coffeeChart"></canvas>
-    </div>
-    <div class="mb-4">
-        <canvas id="mvpChart"></canvas>
+    <div class="row">
+        <div class="col-md-6 mb-4 text-center">
+            <canvas id="coffeeChart" width="300" height="300"></canvas>
+        </div>
+        <div class="col-md-6 mb-4 text-center">
+            <canvas id="mvpChart" width="300" height="300"></canvas>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
