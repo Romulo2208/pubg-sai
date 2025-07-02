@@ -31,12 +31,12 @@ class MatchController extends Controller
                 'kills' => $stats['kills'] ?? 0,
                 'assists' => $stats['assists'] ?? 0,
                 'damage' => $stats['damage'] ?? 0,
-                'survived' => isset($stats['survived']),
+                'survived' => $stats['survived'] ?? 0,
                 'rescue' => $stats['rescue'] ?? 0,
                 'recall' => $stats['recall'] ?? 0,
                 'score' => $stats['score'] ?? 0,
                 'mvp' => isset($stats['mvp']),
-                'coffee' => $stats['coffee'] ?? 0,
+                'coffee' => isset($stats['coffee']),
                 'played' => isset($stats['played']),
             ]);
         }
@@ -62,12 +62,12 @@ class MatchController extends Controller
                 'kills' => $stats['kills'] ?? 0,
                 'assists' => $stats['assists'] ?? 0,
                 'damage' => $stats['damage'] ?? 0,
-                'survived' => isset($stats['survived']),
+                'survived' => $stats['survived'] ?? 0,
                 'rescue' => $stats['rescue'] ?? 0,
                 'recall' => $stats['recall'] ?? 0,
                 'score' => $stats['score'] ?? 0,
                 'mvp' => isset($stats['mvp']),
-                'coffee' => $stats['coffee'] ?? 0,
+                'coffee' => isset($stats['coffee']),
                 'played' => isset($stats['played']),
             ]);
         }
